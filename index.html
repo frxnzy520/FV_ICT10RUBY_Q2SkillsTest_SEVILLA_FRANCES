@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <title>ICT 10 | Periodic Table</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f1f7ed;
+            font-family: 'Trebuchet MS', sans-serif;
+            color: #405c43;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .container {
+            background: #fffdf6;
+            width: 100%;
+            max-width: 500px;
+            padding: 40px 35px;
+            border-radius: 25px;
+            border: 2px solid #dcebd5;
+            box-shadow: 0 10px 25px rgba(91, 126, 87, 0.12);
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: #527c50;
+            font-size: 32px;
+            margin: 5px 0;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            color: #91a88a;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #dcebd5;
+            border-radius: 12px;
+            background: #f8fbf5;
+            outline: none;
+            font-size: 15px;
+            color: #405c43;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #83aa7b;
+            box-shadow: 0 0 8px rgba(131, 170, 123, 0.2);
+        }
+
+        input::placeholder {
+            color: #b4c5ad;
+        }
+
+        button {
+            margin-top: 18px;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            background: #83a97a;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 8px rgba(91, 126, 87, 0.15);
+        }
+
+        button:hover {
+            background: #668d60;
+            transform: translateY(-2px);
+        }
+
+        .result {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        h3 {
+            text-align: center;
+            color: #668d60;
+            font-size: 17px;
+            letter-spacing: 2px;
+            border-bottom: 2px dashed #dcebd5;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            background: #f3f8ef;
+            border-radius: 12px;
+            padding: 12px 15px;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .info b {
+            color: #668d60;
+        }
+
+        .info span {
+            float: right;
+            color: #405c43;
+            font-weight: bold;
+        }
+
+        .footer {
+            color: #a2b79b;
+            font-size: 12px;
+            margin-top: 25px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="icon">⋆. 𐙚 ̊🍋‍🟩♪⋆.✮</div>
+
+        <h1>Periodic Table</h1>
+
+        <p class="subtitle">
+            ✧ Search for an element by its symbol and get its name, atomic number, and atomic mass. ✧
+        </p>
+
+        <input
+            type="text"
+            id="element"
+            placeholder="e.g. H, O, Na, Fe"
+        />
+
+        <button py-click="search_element">
+            ✿ Search Element
+        </button>
+
+        <div class="result">
+
+            <h3>♡ SEARCH RESULT ♡</h3>
+
+            <div class="info">
+                <b>Element Symbol</b>
+                <span id="code"></span>
+            </div>
+
+            <div class="info">
+                <b>Element Name</b>
+                <span id="name"></span>
+            </div>
+
+            <div class="info">
+                <b>Atomic Number</b>
+                <span id="order"></span>
+            </div>
+
+            <div class="info">
+                <b>Atomic Mass</b>
+                <span id="elements"></span>
+            </div>
+
+        </div>
+
+        <p class="footer">
+            Live love Miss Evangalista !!!
+        </p>
+
+    </div>
+
+    <script type="py" src="main.py"></script>
+
+</body>
+</html>
